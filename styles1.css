@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.main-image {
+    position: relative; /* 使按钮可以绝对定位在这个容器内 */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#largeImage {
+    width: 500px;
+    height: auto;
+    transition: filter 0.3s ease;
+}
+
+.gallery {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.thumbnail {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+}
+
+button {
+    position: absolute; /* 绝对定位按钮 */
+    top: 10px; /* 距离容器顶部10px */
+    left: 10px; /* 距离容器左边10px */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 10; /* 确保按钮在图片上方 */
+}
